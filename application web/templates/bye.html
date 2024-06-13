@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BE MY EYE</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+     body {
+    background-color: #14a3cd; /* Définir la couleur de fond de la page en bleu ciel */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+    margin: 0; /* Supprimer les marges par défaut du corps */
+
+  }
+
+  .container {
+    text-align: center; /* Centrer le contenu à l'intérieur du conteneur */
+  }
+
+  .container img {
+    width: 250px; /* Définir la largeur de l'image */
+    height: auto; /* Garder le rapport hauteur/largeur de l'image */
+  }
+
+  #NOM {
+    margin-top: 10px; /* Ajustez la marge supérieure selon vos besoins */
+    color: white;
+    font-size: 30px;
+    font-family: 'ShadowsIntoLight-Regular', sans-serif; /* Utiliser la police personnalisée avec une police de secours sans-serif */
+}
+
+
+  @font-face {
+    font-family: 'ShadowsIntoLight-Regular';
+    src: url('fonts\ShadowsIntoLight-Regular.ttf') ; /* Remplacez le chemin par le chemin réel de votre fichier de police */
+  }
+
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <a href="/home/" id="link"><img src="{% static 'icon/logo.png' %}" alt="Mon application"></a>
+    <p id="NOM">VueNav</p>
+  </div>
+<script>
+window.onload = function() {
+    // Commence la reconnaissance vocale
+    var recognition = new webkitSpeechRecognition();
+    recognition.continuous = true;
+    recognition.start();
+
+    // Message de salutation
+    var greetingMessage = new SpeechSynthesisUtterance('bye!');
+    window.speechSynthesis.speak(greetingMessage);
+
+    recognition.onresult = function(event) {
+        console.log('Résultat de reconnaissance vocale reçu');
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+            console.log('Transcription : ' + event.results[i][0].transcript);
+            if (event.results[i].isFinal) {
+                var transcript = event.results[i][0].transcript.trim().toLowerCase();
+                console.log('Transcription finale : ' + transcript);
+                if (transcript === "home.") {
+                    // Exécute la fonction execute_script
+                    window.location.href = "http://127.0.0.1:8000/home/";
+                }
+            }
+        }
+    };
+};
+</script>
+
+
+</body>
+</html>

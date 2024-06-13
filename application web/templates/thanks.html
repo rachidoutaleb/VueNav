@@ -1,0 +1,314 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+      <style>
+          body {
+  margin: 0;
+  padding: 0;
+}
+
+.background-wrap {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #14a3cd; /* Couleur de fond */
+  /* Ajout de la couleur devant la vidéo */
+}
+
+.background-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 163, 205, 0.85); /* Couleur avec transparence */
+  z-index: 0; /* Pour s'assurer que la couleur est en dessous de la vidéo */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Votre autre CSS ici */
+
+.desktop {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .div {
+  background-color: #ffffff;
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+
+.desktop .overlap-group {
+  position: absolute;
+  width: 93.333%;
+  height: 31.37vh;
+  top: 15.686vh;
+  left: 3.56%;
+}
+
+.desktop .img {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  right: 60%;
+  object-fit: cover;
+  width: 500px;
+  height: auto;
+}
+
+.desktop .button,
+.desktop .button-2,
+.desktop .button-3,
+.desktop .button-4,
+.desktop .button-5,
+.desktop .button-6 {
+  /* background-color: #14a3cd; */
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease;
+  background-color: #7fbcd2;
+  border-color: #4a9cc6;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+  border: 3px solid #ffffff;
+}
+
+.desktop .button:hover,
+.desktop .button-2:hover,
+.desktop .button-3:hover,
+.desktop .button-4:hover,
+.desktop .button-5:hover,
+.desktop .button-6:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(178, 238, 203, 0.6);
+}
+
+.desktop .button,
+.desktop .button-2 {
+  position: absolute;
+  width: 250px;
+  height: 130px;
+  top: 0;
+}
+
+.desktop .button {
+  left: 74.444%;
+}
+
+.desktop .button-2 {
+  left: 5%;
+}
+
+.desktop .button-3 {
+  position: absolute;
+  width: 250px;
+  height: 130px;
+  top: 250px;
+  left: 8.264%;
+}
+
+.desktop .button-4 {
+  position: absolute;
+  width: 250px;
+  height: 130px;
+  top: 250px;
+  left: 73.05%;
+}
+
+.desktop .button-5 {
+  position: absolute;
+  width: 250px;
+  height: 130px;
+  top: 65.989vh;
+  left: 73.05%;
+}
+
+.desktop .button-6 {
+  position: absolute;
+  width: 250px;
+  height: 130px;
+  top: 65.989vh;
+  left: 8.264%;
+}
+
+.desktop .button img,
+.desktop .button-2 img,
+.desktop .button-3 img,
+.desktop .button-4 img,
+.desktop .button-5 img,
+.desktop .button-6 img {
+  width: 70%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.desktop .button:hover img,
+.desktop .button-2:hover img,
+.desktop .button-3:hover img,
+.desktop .button-4:hover img,
+.desktop .button-5:hover img,
+.desktop .button-6:hover img {
+  transform: scale(1.2);
+}
+
+
+
+      </style>
+  </head>
+
+  <body>
+    <div class="background-wrap">
+      <video id="background-video" autoplay muted loop>
+        <source src="{% static 'icon/istockphoto-1398356860-640_adpp_is.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+      <div class="desktop">
+        <div class="div">
+          <div class="overlap-group">
+            <img class="img" src="{% static './icon/logo.png' %}" />
+            <div>
+              <form id="outdoor-form" action="{% url 'outdoor' %}" method="post">
+                {% csrf_token %}
+                <button class="button" type="submit" value="outdoor__script">
+                  <img
+                    src="{% static 'icon/passage.png' %}"
+                    alt="logo"
+                    style="width: 200px; height: auto"
+                  />
+                </button>
+              </form>
+            </div>
+            <form id="indoor-form" action="{% url 'indoor' %}" method="post">
+              {% csrf_token %}
+              <button class="button-2" type="submit" value="indoor__script">
+                <img
+                  src="{% static 'icon/home.png' %}"
+                  alt="logo"
+                  style="width: 200px; height: auto"
+                />
+              </button>
+            </form>
+          </div>
+          <div>
+            <form id="map-form" action="/home/map" method="post">
+              {% csrf_token %}
+              <button class="button-3" type="submit" value="map__script">
+                <img
+                  src="{% static 'icon/emplacement.png' %}"
+                  alt="logo"
+                  style="width: 200px; height: auto"
+                />
+              </button>
+            </form>
+          </div>
+          <div>
+            <form id="shop-form" action="{% url 'shop' %}" method="post">
+              {% csrf_token %}
+              <button class="button-4" type="submit" value="shop__script">
+                <img
+                  src="{% static 'icon/shop.svg' %}" alt="logo"  style="width: 100px; height: auto"
+                />
+              </button>
+            </form>
+          </div>
+          <div>
+            <form id="text-form" action="{% url 'text' %}" method="post">
+              {% csrf_token %}
+              <button class="button-5" type="submit" value="text__script">
+                <img
+                  src="{% static 'icon/doc.png' %}"
+                  alt="logo"
+                  style="width: 200px; height: auto"
+                />
+              </button>
+            </form>
+          </div>
+          <div>
+            <form id="face-form" action="{% url 'main' %}" method="post">
+              {% csrf_token %}
+              <button class="button-6" type="submit" value="face__script">
+                <img
+                  src="{% static 'icon/face.png' %}"
+                  alt="logo"
+                  style="width: 100px; height: auto"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+  <script>
+        window.onload = function() {
+            // Commence la reconnaissance vocale
+            var recognition = new webkitSpeechRecognition();
+            recognition.continuous = true;
+            recognition.start();
+
+             // Message de salutation
+    var greetingMessage = new SpeechSynthesisUtterance('Merci , choisit autre fonctionne');
+    window.speechSynthesis.speak(greetingMessage);
+
+
+            recognition.onresult = function(event) {
+                console.log('Résultat de reconnaissance vocale reçu');
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
+                    console.log('Transcription : ' + event.results[i][0].transcript);
+                    if (event.results[i].isFinal) {
+                        var transcript = event.results[i][0].transcript.trim().toLowerCase();
+                        console.log('Transcription finale : ' + transcript);
+                        if (transcript === "indoor.") {
+                            // Exécute la fonction execute_script
+                            document.getElementById('indoor-form').submit();
+                        }else if (transcript === "map.") {
+                            // Exécute la fonction execute_script
+                            document.getElementById('map-form').submit();
+                        }else if (transcript === "shop.") {
+                            // Exécute la fonction execute_script
+                            document.getElementById('shop-form').submit();
+                        }else if (transcript === "face.") {
+                            // Exécute la fonction execute_script
+                            document.getElementById('face-form').submit();
+                        }else if (transcript === "outdoor.") {
+                            // Exécute la fonction execute_script
+                            document.getElementById('outdoor-form').submit();
+                        }else if (transcript === "text.") {
+                            // Exécute la fonction execute_script
+                            document.getElementById('text-form').submit();
+                        }
+
+                    }
+                }
+            };
+        };
+    </script>
+
+</body>
+</html>
