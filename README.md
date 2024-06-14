@@ -32,3 +32,43 @@ The mobile application offers a slightly varied range of functions compared to t
 - **Site:** Redirects users to the VueNav website.
 
 
+
+## Web application interfaces
+**The main page of the web application :**
+
+![image_480x240](https://github.com/rachidoutaleb/VueNav/assets/123762098/8a1bee25-a92b-4cfa-b43f-a31bc945d4fb)
+
+**Indoor Detection:**
+
+![image_240x360](https://github.com/rachidoutaleb/VueNav/assets/123762098/3e71f262-c03d-48cf-89b2-34e1fdbbff94)
+
+**Outdoor Detection:** 
+
+**Face Recognition:**
+
+**Text Recognition:**
+
+**Map Navigation:**
+
+![image_480x220](https://github.com/rachidoutaleb/VueNav/assets/123762098/9225f150-f132-4539-98d5-4c07335e7631)
+
+**Supermarket Navigation:**
+
+![image_480x360](https://github.com/rachidoutaleb/VueNav/assets/123762098/9da763ea-a26e-4ebb-b51b-74ee8a50233e)
+
+## Mobile Application Features
+
+**Indoor Detection:**
+
+**Outdoor Detection:**
+
+**Face Recognition:**
+
+**Map Navigation:**
+
+**Settings:**
+
+**Help:**
+
+**Site:**
+
