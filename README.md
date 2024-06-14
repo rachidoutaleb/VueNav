@@ -31,6 +31,16 @@ The mobile application offers a slightly varied range of functions compared to t
 - **Help:** Initiates an automatic call to emergency services.
 - **Site:** Redirects users to the VueNav website.
 
+## How to Use Web Application :
+
+```
+git clone https://github.com/rachidoutaleb/VueNav.git
+cd "VueNav/application web"
+pip install -r requirements.txt
+cd code
+npm start
+
+```
 
 
 ## Web application interfaces
