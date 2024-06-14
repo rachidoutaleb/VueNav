@@ -12,7 +12,7 @@ Users can interact with the web application using voice commands to:
 
 
 ## Web Application Features
-The web application includes the following six options:
+The web application includes the following 6 options:
 - **Indoor Detection:** Helps users navigate indoor environments by providing information about objects in their surroundings.
 - **Outdoor Detection:** Assists users in outdoor settings by detecting obstacles.
 - **Face Recognition:** Identifies faces, distinguishes between male and female, and estimates the age range.
@@ -20,7 +20,7 @@ The web application includes the following six options:
 - **Map Navigation:** Provides precise auditory details about the current position.
 - **Supermarket Navigation:** Helps users identify the names of products within a supermarket setting efficiently.
 
-Mobile Application Features
+## Mobile Application Features
 The mobile application offers a slightly varied range of functions compared to the web application.
 
 - **Indoor Detection:** Helps users navigate indoor environments by providing information about objects in their surroundings.
