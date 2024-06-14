@@ -39,7 +39,6 @@ cd "VueNav/application web"
 pip install -r requirements.txt
 cd code
 npm start
-
 ```
 
 
