@@ -56,7 +56,7 @@ The mobile application offers a slightly varied range of functions compared to t
 
 ![image_480x360](https://github.com/rachidoutaleb/VueNav/assets/123762098/9da763ea-a26e-4ebb-b51b-74ee8a50233e)
 
-## Mobile Application Features
+## Mobile Application interfaces
 
 **Indoor Detection:**
 
