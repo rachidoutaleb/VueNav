@@ -42,11 +42,17 @@ The mobile application offers a slightly varied range of functions compared to t
 
 ![image_240x360](https://github.com/rachidoutaleb/VueNav/assets/123762098/3e71f262-c03d-48cf-89b2-34e1fdbbff94)
 
-**Outdoor Detection:** 
-
 **Face Recognition:**
 
+![image_400x400](https://github.com/rachidoutaleb/VueNav/assets/123762098/eaac93ab-7f71-4288-99ff-964eef962c73)
+
+
 **Text Recognition:**
+
+![image_480x220](https://github.com/rachidoutaleb/VueNav/assets/123762098/5b718b81-aba2-442f-8504-35a371ecaede)
+
+
+
 
 **Map Navigation:**
 
@@ -57,18 +63,41 @@ The mobile application offers a slightly varied range of functions compared to t
 ![image_480x360](https://github.com/rachidoutaleb/VueNav/assets/123762098/9da763ea-a26e-4ebb-b51b-74ee8a50233e)
 
 ## Mobile Application interfaces
+**The main page :**
+
+![image_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/3aea8c40-961f-4810-8f2e-d2ff02582e29)
 
 **Indoor Detection:**
 
+![image_7_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/b51023f7-9823-44d7-b651-3eb5d7e9970f)
+
+
+
+
 **Outdoor Detection:**
+
+![image_2_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/78661f74-0b3e-4e67-9e8a-6479450edcf0)
+
+
 
 **Face Recognition:**
 
+![image_6_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/1d014434-63df-4842-85e4-ed2797fad10e)
+
+
 **Map Navigation:**
+
+![image_5_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/799c9436-d631-4cc3-a5d0-2c4c8ef78c12)
+
 
 **Settings:**
 
+![image_4_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/c0384da9-24e7-4c72-9b3b-4fbb9c720972)
+
+
 **Help:**
 
-**Site:**
+![image_1_220x480](https://github.com/rachidoutaleb/VueNav/assets/123762098/c4416e02-870c-403c-81e8-d64a2d612692)
+
+
 
